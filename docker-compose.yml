@@ -18,16 +18,18 @@ services:
     depends_on:
       - mongo
     environment:
-      - MONGO_URI=mongodb://mongo:27017/mern_app
+      - MONGODB_URL=mongodb://mongo:27017/devops
 
   frontend:
     build: ./frontend
     container_name: frontend
     restart: always
     ports:
-      - "3000:80"
+      - "3000:3000"
     depends_on:
       - backend
+    environment:
+      - REACT_APP_YOUR_HOSTNAME=http://backend:5000
 
 volumes:
   mongo_data:
