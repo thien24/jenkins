@@ -77,7 +77,7 @@ export default function Edit() {
                     />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="position">Position</label>
+                    <label htmlFor="position">Chức vụ</label>
                     <input
                         type="text"
                         className="form-control"
